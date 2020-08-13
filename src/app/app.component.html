@@ -1,8 +1,9 @@
 <!-- nav -->
-<mat-toolbar color="primary" layout="fill">
+<mat-toolbar color="primary" layout="fill" *ngIf="user">
   <h1>{{title}}</h1>
   <button mat-button routerLink="/posts"> Posts </button>
   <button mat-button routerLink="/resources"> Resources </button>
+  <button mat-button (click)="logout()">Logout</button>
     
 </mat-toolbar>
 

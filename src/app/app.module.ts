@@ -11,16 +11,21 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatIconModule} from '@angular/material/icon';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatGridListModule} from '@angular/material/grid-list';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
 
 import { HttpClientModule } from '@angular/common/http';
 import { PostsComponent } from './posts/posts.component';
 import { ResourcesComponent } from './resources/resources.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PostsComponent,
-    ResourcesComponent
+    ResourcesComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -33,6 +38,10 @@ import { ResourcesComponent } from './resources/resources.component';
     MatIconModule,
     MatPaginatorModule,
     MatGridListModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatInputModule,
     HttpClientModule
   ],
   providers: [],
