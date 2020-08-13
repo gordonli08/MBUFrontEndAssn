@@ -1,13 +1,9 @@
 <!-- nav -->
 <mat-toolbar color="primary">
-  <mat-toolbar-row>
-    <h1>{{title}}</h1>
-    <span class="menu-spacer"></span>
-    <div>
-      <a mat-button [routerLink]="'/posts'"> Posts </a>
-      <a mat-button [routerLink]="'/resources'"> Resources </a>
-    </div>
-  </mat-toolbar-row>
+  <h1>{{title}}</h1>
+  <button mat-button routerLink="/posts"> Posts </button>
+  <button mat-button routerLink="/resources"> Resources </button>
+    
 </mat-toolbar>
 
 <!-- main app container -->
