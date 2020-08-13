@@ -16,7 +16,7 @@ export class PostsComponent implements OnInit {
     this.postDataService.sendGetRequest().subscribe((data: any[]) => {
       console.log(data);
       this.posts = data;
-    })
+    });
   }
 
   deletePost(id: number) {

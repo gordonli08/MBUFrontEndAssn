@@ -9,6 +9,8 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatIconModule} from '@angular/material/icon';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatGridListModule} from '@angular/material/grid-list';
 
 import { HttpClientModule } from '@angular/common/http';
 import { PostsComponent } from './posts/posts.component';
@@ -29,6 +31,8 @@ import { ResourcesComponent } from './resources/resources.component';
     MatButtonModule,
     MatProgressSpinnerModule,
     MatIconModule,
+    MatPaginatorModule,
+    MatGridListModule,
     HttpClientModule
   ],
   providers: [],

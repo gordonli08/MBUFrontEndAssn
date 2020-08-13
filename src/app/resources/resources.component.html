@@ -1,0 +1,28 @@
+<mat-grid-list class="grid-list" [cols]="colsize" rowHeight="fit" >
+    <mat-grid-tile class="grid-tile" *ngFor="let res of resource?.data">
+        <div class="color-card">
+            <mat-card>
+                <mat-card-header>
+                    <div class="color-box" [ngStyle]="{'background': res.color}"></div>
+                    <mat-card-title>{{res.name}}</mat-card-title>
+                    <mat-card-subtitle>{{res.color}}</mat-card-subtitle>
+                </mat-card-header>
+                <mat-card-content>
+                  <p>
+                    Patone: {{res.pantone_value}}
+                    <br/>
+                    Year: {{res.year}}
+                  </p>
+                </mat-card-content>
+            </mat-card>
+        </div>
+    </mat-grid-tile>
+</mat-grid-list>
+
+
+<mat-paginator [length]="resource?.total_pages"
+[pageSize]="resource?.per_page"
+[length]="resource?.total"
+(page)="OnPageChange($event)"
+class="pagination">
+</mat-paginator>

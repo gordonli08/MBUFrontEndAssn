@@ -1,0 +1,24 @@
+.grid-list {
+    width:500px;
+    height: 500px;
+    padding-bottom:0px;
+    margin:auto;
+}
+.color-card {
+    width:240px;
+    height:120px;
+    margin:5px;
+}
+.pagination {
+    margin:auto;
+    width:500px;
+}
+.color-box {
+    position: absolute;
+    width:50px;
+    height:50px;
+    right:15px;
+}
+.grid-tile {
+    margin-bottom:5px;
+}
