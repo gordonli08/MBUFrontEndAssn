@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from '../auth.service';
 import { first } from 'rxjs/operators';
 import { Router } from '@angular/router';
+import { User } from '../model/user.model';
 
 @Component({
   selector: 'app-login',
@@ -12,6 +13,7 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
 
   form: FormGroup;
+  user: User;
   submitted = false;
   returnUrl = '/posts';
   loginInvalid: boolean;
@@ -21,7 +23,9 @@ export class LoginComponent implements OnInit {
     private formBuilder: FormBuilder,
     private router: Router,
     private authService: AuthService
-  ) { }
+  ) { 
+    this.authService.user.subscribe(x => this.user = x);
+  }
 
   ngOnInit(): void {
     this.form = this.formBuilder.group({
