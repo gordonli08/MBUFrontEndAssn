@@ -44,7 +44,9 @@ import { LoginComponent } from './login/login.component';
     MatInputModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [
+    HttpClientModule
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
